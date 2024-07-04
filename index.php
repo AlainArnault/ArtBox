@@ -13,7 +13,24 @@
     <?php require_once(__DIR__ . '/header.php'); ?>
     
     <main>
-        <div id="liste-oeuvres">
+    <?php
+            include 'oeuvres.php';
+    ?>
+    <div id="liste-oeuvres">
+        <?php foreach ($oeuvre as $ficheOeuvre) : ?>
+            <article class="oeuvre">
+                            <a href="<?php $ficheOeuvre['lien']; ?>">
+                                <img src=<?php echo $ficheOeuvre['img-oeuvre']; ?> alt="<?php echo $ficheOeuvre['title']; ?>">
+                                <h2><?php $ficheOeuvre['title']; ?></h2>
+                                <p class="description"><?php $ficheOeuvre['description']; ?></p>
+                            </a>
+                <?php endforeach; ?>
+            
+            </article>
+                    
+            
+
+
             <article class="oeuvre">
                 <a href="oeuvre-1.php">
                     <img src="img/clark-van-der-beken.png" alt="Dodomu">
