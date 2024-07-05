@@ -20,18 +20,10 @@
 
 
 <?php foreach ($oeuvre as $ficheOeuvre) : ?>
-    <article class="oeuvre">
-                    <a href="<?php echo $ficheOeuvre['lien']; ?>">
-                        <img src=<?php echo $ficheOeuvre['img-oeuvre']; ?> alt="<?php echo $ficheOeuvre['title']; ?>">
-                        <h2><?php echo $ficheOeuvre['title']; ?></h2>
-                        <p class="description"><?php echo $ficheOeuvre['description']; ?></p>
-                    </a>
-    </article>
-<?php endforeach; ?>
 
     <article id="detail-oeuvre">
         <div id="img-oeuvre">
-            <img src=<?php if ($oeuvreIdecho $ficheOeuvre['img-oeuvre']; ?> alt="<?php echo $ficheOeuvre['title']; ?>">
+            <img src=<?php echo $ficheOeuvre['img-oeuvre']; ?> alt="<?php echo $ficheOeuvre['title']; ?>">
         </div>
         <div id="contenu-oeuvre">
             <h1>Dodomu</h1>
@@ -41,6 +33,10 @@
             </p>
         </div>
     </article>
+
+<?php endforeach; ?>
+
+    
 </main>
     
 <?php require_once(__DIR__ . '/footer.php'); ?>
